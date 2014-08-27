@@ -84,6 +84,7 @@
 	<script type="text/javascript" src="/duckAlerts/assets/js/duck.js" ></script>
 	<script type="text/javascript">
 		$(".duckAlertTrigger").click(function(){
-			raiseDuckAlert("Testing testing 1,2,3...", duckType.info, true);
+			raiseDuckDialog("Are you sure ? ", duckType.info, true, function(){alert('You are sure !');}, function(){alert("You're not sure :(");});
+		});
 	</script>
 </html>

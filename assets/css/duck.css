@@ -3,6 +3,8 @@
 	text-align: center;
 	background: pink;
 	border: 1px solid blue;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
 	position: fixed;
 	top:0px;
 	left: 10%;
