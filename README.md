@@ -15,6 +15,10 @@ raiseDuckAlert - raises an alert, this alert has text and an okay button. You ca
 
 raiseDuckDialog - raises a dialog box, with some text and a "Yes" and "No" button. A callback can be attached to either button
 
+All thats needed to do include the file in the assets folder within your web app. If you folder structure is different from the one provided, you need to change the variable "imgLocation" in file "assets/js/duck.js"
+
+See index.html for example usage.
+
 Syntax
 ===
 

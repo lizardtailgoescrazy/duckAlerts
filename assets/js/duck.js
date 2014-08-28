@@ -1,7 +1,3 @@
-//On doc ready
-
-var duckType = ['info','error','success','dialog', 'warning'];
-
 var imgLocation = "assets/img/";
 
 function raiseDuckError(text){
@@ -130,6 +126,8 @@ function raiseDuckDialog(text, alertType, intrusive, doneFunc, notDoneFunc){
 	makeTheBox(text, alertType, intrusive);
 	makeTheButtons(true, doneFunc, notDoneFunc);
 }
+
+var duckType = ['info','error','success','dialog', 'warning'];
 
 (function() {
 	if (window.jQuery) {  
