@@ -43,6 +43,7 @@ Alert types can be of the following type: 'info','error','success','dialog', 'wa
 All types can be used with either function, as of now it only ads a class to the alert container, which can be edited in your own custom css file,  each style added is duck-style-class-<Alert type>.
 
 **Intrusive**
+
 Setting the intrusive argument to true, a div will block the entire webpage, making the webpage unaccessible, if set to false the user will still be able to interact with the webpage even though the alert is active.
 
 
