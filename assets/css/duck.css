@@ -1,14 +1,16 @@
 .duckAlertContainer{
 	width: 80%;
 	text-align: center;
-	background: pink;
-	border: 1px solid blue;
 	border-bottom-left-radius: 1em;
 	border-bottom-right-radius: 1em;
+	-webkit-box-shadow: 0px 0px 4px 0px #ffffff;
+	box-shadow: 0px 0px 4px 0px #ffffff;
 	position: fixed;
 	top:0px;
 	left: 10%;
 	z-index: 9999;
+	padding: 0 1em 1em 1em;
+	background: #f0f0f0;
 }
 .duckBlock{
 	display: block;
@@ -20,4 +22,36 @@
 	z-index: 9996;
 	background: black;
 	opacity: .125;
+}
+
+.duckAlertStuff{
+	padding-top: 1em;
+}
+
+.duckAlertContainer .duckAlertStuff .duckButtons button{
+	padding: 1em 3em;
+	border-radius: 0.8em;
+	margin: 0em 2em;
+	cursor: pointer;
+
+}
+
+.duckAlertContainer .duckAlertStuff .duckButtons .duckDoneSuccess{
+	background: #5cb85c;
+	color: white;
+	border: 0px solid white;
+}
+
+.duckAlertContainer .duckAlertStuff .duckButtons .duckDoneSuccess:hover{
+	background: #50d350;
+}
+
+.duckAlertContainer .duckAlertStuff .duckButtons .duckDoneCancel{
+	background: #d9534f;
+	color: white;
+	border: 0px solid white;
+}
+
+.duckAlertContainer .duckAlertStuff .duckButtons .duckDoneCancel:hover{
+	background: #fd413c;
 }

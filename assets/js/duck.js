@@ -1,6 +1,14 @@
 //On doc ready
 
-var duckType = ['info','error','success','dialog'];
+var duckType = ['info','error','success','dialog', 'warning'];
+
+var imgLocation = "assets/img/";
+
+function raiseDuckError(text){
+	if(console && console.error){
+		console.error("DUCK ALERTS: " + text);
+	}
+}
 
 function makeTheBox(text, alertType, intrusive){
 	if($('.duckAlertContainer') && $('.duckAlertContainer').length > 0){
@@ -14,7 +22,11 @@ function makeTheBox(text, alertType, intrusive){
 	}
 	$('body').append('<div class="duckAlertContainer" >\
 		<div class="duckAlertStuff">\
-			<p class="duckAlertText"></p>\
+			<div style="width: 75%; margin: auto;">\
+				<div style="float: left; width: 20%;"><img class="duckAlertIcon" /></div>\
+				<div style="float: left; width: 60%;"><p class="duckAlertText"></p></div>\
+				<div style="clear: both;"></div>\
+			</div>\
 			<div class="duckButtons">\
 			</div>\
 		</div>\
@@ -26,14 +38,14 @@ function makeTheBox(text, alertType, intrusive){
 	var style = "";
 
 	if(duckType.indexOf(alertType) == -1){
-		style = "duck-style-class-info";
-		if(console && console.error){
-			console.error("DUCK ALERTS: Alert type not recognised, defaults to info.");
-		}
+		alertType = "info";
+		raiseDuckError("Alert type not recognised, defaults to info.");
 	}
-	else{
-		style = "duck-style-class-"+alertType;
-	}
+	style = "duck-style-class-"+alertType;
+
+	$('.duckAlertIcon').attr('src', imgLocation+alertType+".png").load(function(){
+		this.width;
+	});
 
 	container.addClass(style);
 
@@ -122,9 +134,8 @@ function raiseDuckDialog(text, alertType, intrusive, doneFunc, notDoneFunc){
 (function() {
 	if (window.jQuery) {  
 
-	} else {
-	    if(console && console.error){
-	    	console.error("DUCK ALERTS: Unable to find jQuery, please make sure it is properly loaded.");
-	    }
+	} 
+	else {
+	    raiseDuckError("Unable to find jQuery, please make sure it is properly loaded.");
 	}
 })();
