@@ -18,6 +18,10 @@
 			<button class="duckAlertWarningTrigger">WARNING TRIGGER</button>
 			<button class="duckAlertDialogTrigger">DIALOG TRIGGER</button>
 
+			<p>DuckAlerts provides 2 types of alerts. Alerts and dialogs. Each of the buttons in the alert provides a callback function.</p>
+
+			<p>For more detail see duckAlert's <a href="https://github.com/lizardtailgoescrazy/duckAlerts">GitHub.</a></p>
+			
 			<p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
 			<p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
 

@@ -13,7 +13,7 @@ There are 2 different functions that can be triggered on any desired time via ja
 
 raiseDuckAlert - raises an alert, this alert has text and an okay button. You can add a callback to the okay button.
 
-raiseDuckDialog - raises a dialog box, with some text and a "Yes" and "No" button. A callback can be attached to either button
+raiseDuckDialog - raises a dialog box, with some text and a "Yes" and "No" button. A callback can be attached to either button.
 
 All thats needed to do include the file in the assets folder within your web app. If you folder structure is different from the one provided, you need to change the variable "imgLocation" in file "assets/js/duck.js"
 
