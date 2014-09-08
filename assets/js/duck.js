@@ -28,29 +28,28 @@ function makeTheBox(text, alertType, intrusive){
 		</div>\
 	</div> ');
 
-	$('.duckAlertStuff .duckAlertText').text(text);
-
-	var container = $('.duckAlertContainer');
-	var style = "";
-
-	if(duckType.indexOf(alertType) == -1){
-		alertType = "info";
-		raiseDuckError("Alert type not recognised, defaults to info.");
-	}
-	style = "duck-style-class-"+alertType;
-
 	$('.duckAlertIcon').attr('src', imgLocation+alertType+".png").load(function(){
 		this.width;
+		$('.duckAlertStuff .duckAlertText').text(text);
+
+		var container = $('.duckAlertContainer');
+		var style = "";
+
+		if(duckType.indexOf(alertType) == -1){
+			alertType = "info";
+			raiseDuckError("Alert type not recognised, defaults to info.");
+		}
+		style = "duck-style-class-"+alertType;
+
+		container.addClass(style);
+
+			container.css("top", -(container.height()));
+			container.animate({
+			    top: "+="+(container.height()-2),
+			  }, "fast", function() {
+			    // Animation complete.
+			  });
 	});
-
-	container.addClass(style);
-
-		container.css("top", -(container.height()));
-		container.animate({
-		    top: "+="+(container.height()-2),
-		  }, "fast", function() {
-		    // Animation complete.
-		  });
 }
 
 function makeTheButtons(isDialog, doneFunc, notDoneFunc){
